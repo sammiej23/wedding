@@ -11,7 +11,7 @@ class OurStory extends React.Component {
       After a few drinks and a wander along the river towards The Tate Modern, we started to realise we quite liked
       each other &hearts;</p>
       <p>Dan moved to Camden to live with Sam in January 2015 as a temporary measure until we found a
-      bigger place. He's still there ;)
+      bigger place. He's still here ;)
       </p>
       <p>Since we met, we've spent a season snowboarding in Morzine, a couple of holidays in cottages in Cornwall and
       Yorkshire and a few short lived attempts at having a jam which didn't work due to musical differences. </p>
