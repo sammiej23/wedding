@@ -68,7 +68,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Sam Jones** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Sam Jones**
 
 
 ## License
