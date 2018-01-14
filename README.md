@@ -61,15 +61,9 @@ Add additional notes about how to deploy this on a live system
 * Yarn
 * Webpack
 
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
-
 ## Authors
 
 * **Sam Jones**
-
 
 ## License
 
