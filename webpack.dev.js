@@ -4,7 +4,7 @@ const common = require('./webpack.common.js');
 module.exports = merge(common, {
   devServer: {
     inline: true,
-    contentBase: './app',
+    contentBase: './client',
     port: 8100
   }
 });
