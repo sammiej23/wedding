@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Photos } from '../components/Photos';
 
 const PHOTOPATHS = [
-  'img/gallery/photo1.jpg',
+  '../img/gallery/photo1.jpg',
   'img/gallery/photo2.jpg',
   'img/gallery/photo3.jpg',
   'img/gallery/photo4.jpg',
@@ -27,21 +27,25 @@ const PHOTOPATHS = [
   'img/gallery/photo22.jpg'
 ];
 
-export class PhotoGallery extends React.Component {
+export class PhotosContainer extends React.Component {
   constructor(props) {
     super(props);
-
+    alert('here I am');
     this.state = { currentPhoto: 0 };
+    console.log(">>> state: " + state);
+    this.nextPhoto = this.nextPhoto.bind(this, this.state);
   }
 
-  nextPhoto() {
-    let current = this.state.currentPhoto;
+  nextPhoto(state) {
+    alert("state: " + state);
+    console.log("currentPhoto: " + state.currentPhoto);
+    let current = state.currentPhoto;
     let next = ++current % PHOTOPATHS.length;
     this.setState({ currentPhoto: next });
   }
 
   componentDidMount() {
-    this.interval = setInterval(this.nextPhoto.bind(this), 5000);
+    this.interval = setInterval(this.nextPhoto, 1000);
   }
 
   componentWillUnmount() {
@@ -50,13 +54,11 @@ export class PhotoGallery extends React.Component {
 
   render() {
     let src = PHOTOPATHS[this.state.currentPhoto];
-    return (
-    <div>
-      <h1>Here we are!</h1>
-      <Photos src={src} />
-    </div>
-    )
+    return <Photos src={src} />;
   }
-};
+});
 
-export default PhotoGallery
+ReactDOM.render(
+  <PhotosContainer />,
+  document.getElementById('photoApp')
+);
